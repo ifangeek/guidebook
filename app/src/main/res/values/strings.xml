@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="attractions">Atracciones</string>
+    <string name="text_informative">La muy noble y Generosa ciudad de Huaraz</string>
+    <string name="text_huaraz">Huaraz</string>
+    <string name="text_peru">Perú</string>
+    <string name="text_more">Más</string>
+    <string name="text_need_know">Lo que necesitas saber</string>
+    <string name="text_about_llanganuco">Acerca de Llanganuco</string>
+
+    <style name="BaseTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BaseTextView.Labels">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorTitle</item>
+        <item name="android:fontFamily">@font/asap_semi_bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 </resources>

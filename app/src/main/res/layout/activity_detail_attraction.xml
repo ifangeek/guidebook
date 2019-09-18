@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:title="LLanganuco">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/llanganuco" />
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAboutHuaraz"
+                style="@style/BaseTextView.Labels"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:includeFontPadding="false"
+                android:text="@string/text_about_llanganuco"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tbDescription"
+                style="@style/BaseTextView"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/open_sans"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:text="La Quebrada de Llanganuco es un desfiladero de alta montaña, ​ de origen glaciar ubicado en la Cordillera Blanca, dentro del Parque Nacional Huascarán en la Provincia ancashina de Yungay en el Perú."
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvAboutHuaraz"
+                app:layout_constraintTop_toBottomOf="@id/tvAboutHuaraz" />
+
+            <TextView
+                android:id="@+id/tvSuggest"
+                style="@style/BaseTextView.Labels"
+                android:layout_marginTop="20dp"
+                android:text="Recomendaciones"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvAboutHuaraz"
+                app:layout_constraintTop_toBottomOf="@id/tbDescription" />
+
+            <ImageView
+                android:id="@+id/ivBullet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/bullet"
+                app:layout_constraintStart_toStartOf="@id/tbDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvSuggest" />
+
+            <TextView
+                android:id="@+id/tvSuggest1"
+                style="@style/BaseTextView"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/open_sans"
+                android:includeFontPadding="false"
+                android:text="La temporada más recomendable de visitar es de abril a noviembre, cuando no llueve."
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBullet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivBullet"
+                app:layout_constraintTop_toTopOf="@id/ivBullet" />
+
+            <ImageView
+                android:id="@+id/ivBullet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/bullet"
+                app:layout_constraintStart_toStartOf="@id/tbDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvSuggest1" />
+
+            <TextView
+                style="@style/BaseTextView"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/open_sans"
+                android:includeFontPadding="false"
+                android:text="Es muy importante llevar lentes de sol con protector UV, protector solar y labial. Asimismo, un calzado adecuado, botellas de agua y artículos de limpieza."
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBullet2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivBullet2"
+                app:layout_constraintTop_toTopOf="@id/ivBullet2" />
+
+            <ImageView
+                android:id="@+id/ivBullet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/bullet"
+                app:layout_constraintStart_toStartOf="@id/tbDescription"
+                app:layout_constraintTop_toBottomOf="@id/ivBullet2" />
+
+            <TextView
+                style="@style/BaseTextView"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/open_sans"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivBullet3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivBullet3"
+                app:layout_constraintTop_toTopOf="@id/ivBullet3"
+                android:text="Si viaja en temporada de sol, llevar vestimenta ligera (día) y ropa de abrigo (noche). Sin embargo, si lo hace en temporada de lluvias llevar ropa impermeables y paraguas. No se recomienda usar jeans porque demoran en secar."/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
